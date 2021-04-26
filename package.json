@@ -1,0 +1,45 @@
+{
+  "name": "simplegrosscalculator",
+  "version": "1.0.0",
+  "author": "Marcin Kowalski",
+  "private": true,
+  "browserslist": [
+    "last 2 versions",
+    "android 4",
+    "opera 12"
+  ],
+  "scripts": {
+    "build-admin:watch": "webpack --env.TAILWIND_MODE=watch --mode development --watch --progress --config admin/src/build/webpack.config.js",
+    "build-admin:production": "webpack --env.NODE_ENV=production --mode production --progress --config admin/src/build/webpack.config.js",
+    "build-public:watch": "webpack --env.TAILWIND_MODE=watch --mode development --watch --progress --config public/src/build/webpack.config.js",
+    "build-public:production": "webpack --env.NODE_ENV=production --mode production --progress --config public/src/build/webpack.config.js",
+    "test": "npm run -s lint"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@tailwindcss/jit": "^0.1.5",
+    "@webpack-cli/init": "^0.3.0",
+    "autoprefixer": "^10.2.5",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-globs-webpack-plugin": "^0.3.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.4.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "4.14.1",
+    "postcss": "^8.2.8",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-import": "^14.0.0",
+    "postcss-loader": "^4.2.0",
+    "sass-loader": "10.1.1",
+    "stylelint": "^13.2.1",
+    "stylelint-webpack-plugin": "^1.2.3",
+    "tailwindcss": "^2.0.4",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
